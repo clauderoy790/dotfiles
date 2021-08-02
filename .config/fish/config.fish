@@ -1,8 +1,6 @@
 #export JAVA_HOME=(/usr/libexec/java_home -v "16.0.1")
 export JAVA_HOME=(/usr/libexec/java_home -v "1.8.0")
 export ANDROID_HOME=$HOME/Library/Android/sdk
-export SPOTIFY_ID=b4becf4b963c478494f5f6945cd3f07e
-export SPOTIFY_SECRET=4901f818e7a94068ab2f64e8018b7dce
 
 set PATH $PATH ~/flutter/bin ~/Go/bin $JAVA_HOME $ANDROID_HOME/emulator $ANDROID_HOME/tools $ANDROID_HOME/tools/bin $ANDROID_HOME/platform-tools /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin $HOME/.gobrew/current/bin $HOME/.gobrew/bin
 
