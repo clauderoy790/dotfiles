@@ -29,8 +29,4 @@ alias python2=/usr/local/bin/python2.7
 alias python=python3
 alias cls='clear && echo -en "\e[3J"'
 alias goland='/usr/local/bin/goland'
-alias d2="cd ~/.wine_d2/drive_c/games/diablo\ ii/mod\ plugy && WINEPREFIX=~/.wine_d2 wine plugy.exe -w -3dfx -nofixaspect -direct -txt"
-alias pd2l="cd ~/.wine_pd2/drive_c/Program\ Files/Diablo\ II/ProjectD2 && WINEPREFIX=~/.wine_pd2 wine PD2Launcher.exe"
-alias pd2="cd ~/.wine_pd2/drive_c/Program\ Files/Diablo\ II/ProjectD2 &&  WINEPREFIX=~/.wine_pd2 wine game.exe -skipbnet"
-alias pod="$GOPATH/src/gitlab.com/claude.roy790/pod-patcher/pod-patcher '/Users/clauderoy/.wine_d2_pod/drive_c/games/Diablo II/Path of Diablo' && cd '/Users/clauderoy/.wine_d2_pod/drive_c/games/Diablo II/Path of Diablo' && WINEPREFIX=~/.wine_d2_pod wine 'Path of Diablo Launcher.exe'"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
