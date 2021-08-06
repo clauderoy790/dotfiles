@@ -1,56 +1,63 @@
 {
-    "vim.insertModeKeyBindings": [
-      {
-        "before": ["j", "j"],
-        "after": ["<esc>"]
-      }
-    ],
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "workbench.colorCustomizations": {
-      "terminal.background": "#1E1E1E",
-      "terminal.foreground": "#2DFE13",
-    },
-    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-    "files.autoSave": "afterDelay",
-    "go.useLanguageServer": true,
-    "[go]": {
-      "editor.formatOnSave": true,
-      "editor.codeActionsOnSave": {
-        "source.organizeImports": true,
-      },
-      // Optional: Disable snippets, as they conflict with completion ranking.
-      "editor.snippetSuggestions": "none",
-    },
-    "[go.mod]": {
-      "editor.formatOnSave": true,
-      "editor.codeActionsOnSave": {
-        "source.organizeImports": true,
-      }
-    },
-    "workbench.iconTheme": "vscode-icons",
-    "[dart]": {
-      "editor.formatOnSave": true,
-      "editor.formatOnType": true,
-      "editor.rulers": [
-        80
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
       ],
-      "editor.selectionHighlight": false,
-      "editor.suggest.snippetsPreventQuickSuggestions": false,
-      "editor.suggestSelection": "first",
-      "editor.tabCompletion": "onlySnippets",
-      "editor.wordBasedSuggestions": false
+      "after": [
+        "<esc>"
+      ]
+    }
+  ],
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.colorCustomizations": {
+    "terminal.background": "#1E1E1E",
+    "terminal.foreground": "#2DFE13",
+  },
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+  "files.autoSave": "afterDelay",
+  "go.useLanguageServer": true,
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true,
     },
-    "go.toolsManagement.autoUpdate": true,
-    "dart.openDevTools": "flutter",
-    "security.workspace.trust.untrustedFiles": "open",
+    // Optional: Disable snippets, as they conflict with completion ranking.
+    "editor.snippetSuggestions": "none",
+  },
+  "[go.mod]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true,
+    }
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "files.exclude": {
-      "**/.classpath": true,
-      "**/.project": true,
-      "**/.settings": true,
-      "**/.factorypath": true
-    },
-    "omnisharp.useGlobalMono": "never"
-  }
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "dart.openDevTools": "flutter",
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "omnisharp.useGlobalMono": "never",
+  "workbench.colorTheme": "Default Dark+",
+  "vim.vimrc.enable": true,
+}

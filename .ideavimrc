@@ -1,1 +1,10 @@
 imap jj <Esc>
+
+nnoremap <A-k> :action MoveLineUp<CR>
+nnoremap <A-j> :action MoveLineDown<CR>
+
+inoremap <A-k> <C-O>:action MoveLineUp<CR>
+inoremap <A-j> <C-O>:action MoveLineDown<CR>
+
+vnoremap <A-k> :action MoveLineUp<CR>
+vnoremap <A-j> :action MoveLineDown<CR>
