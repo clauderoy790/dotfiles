@@ -1,13 +1,334 @@
 // Place your key bindings in this file to override the defaults
 [
-    {
-        "key": "alt+j",
-        "command": "editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly && vim.active"
-    },
-    {
-        "key": "alt+k",
-        "command": "editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly && vim.active"
-    },
+  // Vim
+  {
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly && vim.active"
+  },
+  {
+    "key": "alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly && vim.active"
+  },
+
+  // Go
+  {
+    "key": "shift+alt+c",
+    "command": "go.test.coverage"
+  },
+  {
+    "key": "shift+alt+t",
+    "command": "go.test.file"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "go.toggle.test.file"
+  },
+
+  // Explorer
+  {
+    "key": "cmd+shift+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "cmd+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus"
+  },
+
+  // Linux
+  {
+    "key": "meta+shift+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "meta+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus"
+  },
+
+  // Editor Keys
+  {
+    "key": "cmd+h",
+    "command": "editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "alt+cmd+f",
+    "command": "-editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
+
+  // Linux
+  {
+    "key": "meta+h",
+    "command": "editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "alt+meta+f",
+    "command": "-editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
+
+  // Git
+  {
+    "key": "shift+cmd+g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "shift+meta+g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "shift+meta+g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "cmd+alt+f",
+    "command": "git.openFile",
+    "when": "editorFocus && isInDiffEditor"
+  },
+  {
+    "key": "meta+alt+f",
+    "command": "git.openFile",
+    "when": "editorFocus && isInDiffEditor"
+  },
+
+  // Workbench actions
+  {
+    "key": "shift+alt+cmd+n",
+    "command": "workbench.action.duplicateWorkspaceInNewWindow"
+  },
+  {
+    "key": "shift+alt+meta+n",
+    "command": "workbench.action.duplicateWorkspaceInNewWindow"
+  },
+  {
+    "key": "shift+alt+r",
+    "command": "rerunSearchEditorSearch",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "-rerunSearchEditorSearch",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "workbench.action.tasks.runTask"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "workbench.action.tasks.terminate"
+  },
+  // Linux
+  {
+    "key": "shift+meta+r",
+    "command": "-rerunSearchEditorSearch",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "shift+meta+r",
+    "command": "workbench.action.tasks.runTask"
+  },
+  {
+    "key": "shift+meta+k",
+    "command": "workbench.action.tasks.terminate"
+  },
+
+  // Terminal
+  {
+    "key": "cmd+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+cmd+j",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "shift+cmd+]",
+    "command": "-workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "shift+cmd+[",
+    "command": "-workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+cmd+left",
+    "command": "-workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+cmd+right",
+    "command": "-workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+
+  // Terminal Linux
+  {
+    "key": "meta+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "meta+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+meta+j",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "shift+meta+]",
+    "command": "-workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "shift+meta+k",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "shift+meta+[",
+    "command": "-workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "shift+meta+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+meta+left",
+    "command": "-workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "shift+meta+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+meta+right",
+    "command": "-workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+
+  // Output
+  {
+    "key": "cmd+k",
+    "command": "workbench.output.action.clearOutput",
+    "when": "panelFocus && activePanel == 'workbench.panel.output'"
+  },
+  {
+    "key": "meta+k",
+    "command": "workbench.output.action.clearOutput",
+    "when": "panelFocus && activePanel == 'workbench.panel.output'"
+  },
+
+  // Debug Console
+  {
+    "key": "cmd+k",
+    "command": "workbench.debug.panel.action.clearReplAction",
+    "when": "panelFocus && activePanel == 'workbench.panel.repl'"
+  },
+  {
+    "key": "shift+alt+cmd+p",
+    "command": "copy-github-permalink.activate"
+  },
+  {
+    "key": "alt+cmd+f12",
+    "command": "editor.action.goToTypeDefinition"
+  },
+  {
+    "key": "ctrl+alt+left",
+    "command": "workbench.action.duplicateActiveEditorGroupLeft"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "workbench.action.duplicateActiveEditorGroupRight"
+  },
+  {
+    "key": "cmd+k cmd+c",
+    "command": "workbench.files.action.collapseExplorerFolders",
+    "when": "filesExplorerFocus"
+  },
+  
+  // Linux
+  {
+    "key": "meta+k",
+    "command": "workbench.debug.panel.action.clearReplAction",
+    "when": "panelFocus && activePanel == 'workbench.panel.repl'"
+  },
+  {
+    "key": "shift+alt+meta+p",
+    "command": "copy-github-permalink.activate"
+  },
+  {
+    "key": "alt+meta+f12",
+    "command": "editor.action.goToTypeDefinition"
+  },
+  {
+    "key": "meta+k meta+c",
+    "command": "workbench.files.action.collapseExplorerFolders",
+    "when": "filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-settings.action.search",
+    "when": "inSettingsEditor"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "actions.find",
+    "when": "isLinux && editorFocus || editorIsOpen"
+  },
 ]
