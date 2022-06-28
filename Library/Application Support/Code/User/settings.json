@@ -15,6 +15,11 @@
   "workbench.editor.closeOnFileDelete": true,
 
   // Editor
+  // "editor.autoClosingBrackets": "never",
+  // "editor.autoClosingQuotes": "never",
+  "editor.snippetSuggestions": "top",
+  "editor.suggest.showSnippets": true,
+  "editor.tabCompletion": "on",
   "editor.fontSize": 16,
   "editor.suggestSelection": "first",
   "editor.formatOnSave": true,
@@ -52,7 +57,7 @@
   },
 
   // Terminal
-  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.fontFamily": "Ubuntu Mono derivative Powerline",
   "terminal.integrated.fontSize": 14,
 
   // Go
@@ -63,7 +68,7 @@
     //   "source.organizeImports": true
     // },
     // Optional: Disable snippets, as they conflict with completion ranking.
-    "editor.snippetSuggestions": "none",
+    // "editor.snippetSuggestions": "none",
     "editor.defaultFormatter": "golang.go"
   },
   // "[go.mod]": {
