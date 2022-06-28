@@ -95,8 +95,8 @@ function roc
 		return 0
 	end
 
-	set currB (git branch --show-current)
-	set mainB master
+	set -l currB (git branch --show-current)
+	set -l mainB master
 	if test -n "$argv"
 		set mainB $argv
 	end
@@ -104,6 +104,7 @@ function roc
 	# return if on main branch
 	if string match $mainB $currB
 		echo "already on main branch"
+		git checkout $currB
 		return 0
 	end
 
@@ -113,9 +114,10 @@ function roc
 	git checkout $currB
 	git rebase $mainB
 
-	# cleanup
-	set -e mainB
-	set -e currB
+	# push if no status
+	if test -z (git status -s)
+		gpf
+	end
 end
 
 # Add all files in Git, commit and push
@@ -174,4 +176,39 @@ end
 # empty commit
 function ec
 	git commit -m $argv --allow-empty
+end
+
+# create new branch from main branch
+# first parameter is the name of your new branch
+# second parameter is the name of the main branch, will default to master
+function cb
+	if test -z "argv[1]"
+		echo provide a name for your new branch
+		return 0
+	end
+
+	set -l mainB master
+	if test -n "$argv[2]"
+		set mainB $argv
+	end
+
+	set -l currB (git branch --show-current)
+	git checkout $mainB
+	# if status is set, don't do anything
+	set -l st (git status -s)
+	if test -n "$st"
+		echo "can only create a new branch when status is clean"
+		git checkout $currB
+		return 0
+	end
+	git pull
+	git checkout -b $argv[1]
+end
+
+function ttt
+	if test -z (git status -s)
+		echo no status
+	else
+		echo status
+	end
 end
