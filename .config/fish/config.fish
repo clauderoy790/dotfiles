@@ -144,11 +144,9 @@ function sc
 	
 	# check if the first argument is a number, if so squash that number of commits with the oldest message
 	if test -n "$argv[1]"; and  not string match --quiet --regex '\D' $argv[1]; and test $argv[1] -gt 0; and test $argv[1] -lt 10
-		echo "in that special csase"
 		set nbCommits $argv[1]	
 		set commitMessage (git log --format=%s -n $nbCommits | sed -n "$nbCommits p")
 	else if test -n "$argv[1]"
-		echo "normal case"
 		set commitMessage $argv[1]
 	end
 
