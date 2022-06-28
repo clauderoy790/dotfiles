@@ -1,3 +1,5 @@
+set relativenumber
+
 imap jj <Esc>
 
 nnoremap ∆ :m .+1<CR>==
