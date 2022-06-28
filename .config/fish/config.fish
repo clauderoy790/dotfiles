@@ -177,11 +177,3 @@ end
 function ec
 	git commit -m $argv --allow-empty
 end
-
-function ttt
-	set -l default (git log --format=%s -n $argv[2] | sed -n "$argv[2] p")
-	if not test "$argv[1]" = "default"
-		set default "it's not the default"
-	end
-	echo default is: $default
-end
